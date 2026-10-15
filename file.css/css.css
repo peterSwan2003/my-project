@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+.d1{
+    background-color: blueviolet;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d2{
+    background-color: white;
+    width: 400px;
+    border-radius: 15px;
+    padding: 20px;
+}
+.tasks-table .d4{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+.tasks-table .d4 h1{
+font-weight: 500;
+}
+.tasks-table .d4 .bt-bt1{
+padding: 10px;
+height: 40px;
+width: 40px;
+border-radius: 50%;
+border: none;
+background-color: rgb(167, 82, 247);
+}
+.tasks-table .d4 .bt-bt1 i{
+    color: white;
+    font-size: 18px;
+}
+.task{
+    background-color: rgb(229, 247, 203);
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border-right: 5px solid blueviolet;
+}
+.task:nth-child(even){
+     border-right: 5px solid palevioletred; 
+}
+.task .info{
+    display: flex;
+    flex-direction: column;
+    direction: rtl;
+    line-height: 1.5;
+}
+.task .info h2 {
+    text-decoration: line-through;
+}
+.task .info .History {
+    color: #aaa;
+}
+.task .info .History i {
+    margin: 0px 5px;
+}
+.task .action {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 5px;
+}
+.task .action button{
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+    color: white;
+    border-radius: 50%;
+    border: none;
+}
+.task .action .bt-bt2{
+background-color: rgb(45, 214, 96);
+}
+.task .action .bt.bt3{
+background-color: rgb(173, 99, 99);
+}
+.task .action .bt.bt3.not-done{
+background-color: rgb(164, 235, 0);
+}
+.task:has(.bt3:not(.not-done)){
+    background-color: #eee;
+}
+.task:has(.bt3:not(.not-done)) h2{
+    text-decoration: none;
+}
+.task .action .bt.bt4{
+background-color: rgb(167, 82, 247);
+}
